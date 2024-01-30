@@ -4,24 +4,18 @@
 // When someone try to access the controller without any other methods Index will be appeared.
 
 class ConHome extends Controller {
-    private mixed $product;
+
+    // status use for internal requests that server should send if it's set on "private"
     public string $status = "public";
-    private mixed $user;
+    private mixed $data;
     public function __construct()
     {
-        $this->user = $this->model("User");
-        $this->product = $this->model("Product");
+        $this->data = $this->model("ModHome");
+
     }
     public function Index($params, $post){
-        $products = $this->product->getProducts();
-
-//        $Products = [];
-//        if (!is_object($Product)){
-//            $Products = array_slice($Product->getProducts(), 0, 6);
-//        }
-
-
-        $this->view("/home/index", ["user" => $_SESSION['user'], "product" => $products]);
+        $user = $this->data->getData($params[0]);
+        $this->view("/home/index", ["user" => $user]);
     }
 }
 

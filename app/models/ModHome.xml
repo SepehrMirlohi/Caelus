@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<schema version="0.3">
+    <table name="home">
+        <field name="id" type="I">
+            <NOTNULL/>
+            <KEY/>
+            <AUTOINCREMENT/>
+        </field>
+        <field name="customer_id" type="I" size="20"/>
+        <field name="product_id" type="I" size="20"/>
+        <field name="text" type="TEXT" size="3000"/>
+        <field name="created_at" type="C" size="250"/>
+    </table>
+</schema>

@@ -21,6 +21,6 @@ require_once "database.php";
 require "adodb5/adodb.inc.php";
 require "adodb5/adodb-xmlschema03.inc.php";
 // Database End -------------------------------
-require_once "view/templates/header.php";
-require_once "view/templates/footer.php";
-require_once "view/templates/dashboardSidebar.php";
+//require_once "view/templates/header.php";
+//require_once "view/templates/footer.php";
+//require_once "view/templates/dashboardSidebar.php";
